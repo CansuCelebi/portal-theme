@@ -1,2 +1,2 @@
 # theme
-Portal tema modulü
+Kocaeli university open source lab yii2 thememodule
