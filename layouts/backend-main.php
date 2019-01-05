@@ -39,27 +39,17 @@ unset($languages[$lang]);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Portal Sınav Programı',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/home']],
-        ['label' => 'Sample', 'url' => ['/sample/samples/index'],
-            'items' => [
-                    ['label' => 'Create', 'url' => ['/sample/samples/create']],
-                    ['label' => 'Manage', 'url' => ['/sample/samples/index']]
-            ]
-        ],
-        ['label' => 'Menu', 'url' => ['/menu/menu/index'],
-            'items' => [
-                    ['label' => 'Create', 'url' => ['/menu/menu/create']],
-                    ['label' => 'Manage', 'url' => ['/menu/menu/index']]
-            ]
-        ],
-        ['label' => 'Settings', 'url' => ['/site/setting']],
+        ['label' => 'Home', 'url' => ['#']],
+        ['label' => 'Sınav Oluştur', 'url' => ['/sinavprogrami/sinav/create']],
+        ['label' => 'Sınavları Göster', 'url' => ['/sinavprogrami/sinav/index']],
+        ['label' => 'Modüle Sayfası', 'url' => ['/sinavprogrami/']],
 
     ];
     if (Yii::$app->user->isGuest) {
@@ -99,9 +89,7 @@ unset($languages[$lang]);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; Kocaeli University Open Source Lab <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+     
     </div>
 </footer>
 
